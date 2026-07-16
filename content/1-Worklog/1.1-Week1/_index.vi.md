@@ -1,59 +1,44 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: "2026-05-23"
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
 
-### Mục tiêu tuần 1:
+  ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
-### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  * Tìm hiểu các khái niệm nền tảng về cloud và AWS.
+  * Làm quen với IAM (user, group, MFA) và quản lý chi phí
+  * Thực hành tạo tài khoản, bật MFA, tạo user, tạo budget và thao tác với AWS Support.
+    
+  ### Các công việc cần triển khai trong tuần này:
+  | Thứ | Công việc                                                                                                                                                                                      | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                                                                                                                                                     |
+  | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | 2   | - Tổng quát lại lí lý thuyết Module 01 để nắm tổng quan về cloud và AWS <br> - Tìm hiểu hạ tầng AWS toàn cầu, Region, AZ <br> - Tìm hiểu IAM cơ bản và cách AWS quản lý user/group             | 19/05/2026   | 19/05/2026      | <https://youtu.be/HxYZAK1coOI?si=vi7dp01LjqDvyIF4> <br><br> <https://youtu.be/IK59Zdd1poE?si=n9pSqe-XCENDsR9B> <br><br> <https://youtu.be/HSzrWGqo3ME?si=enh1H3F44IYXuziO> <br><br> <https://youtu.be/pjr5a-HYAjI?si=NvVriAEQGRto2QPs> <br><br> <https://youtu.be/2PQYqH_HkXw?si=eDL8iYkYSYb7Kcvk> |
+  | 3   | - **Thực hành:** <br>&emsp; + Create AWS Account <br>&emsp; + Bật MFA <br>&emsp; + Create admin group & admin user <br>&emsp; + Kiểm tra xác thực tài khoản                                    | 20/05/2026   | 20/05/2026      | <https://youtu.be/IY61YlmXQe8?si=lle8PWNXwvrGvQlN> <br><br> <https://youtu.be/Hku7exDBURo?si=IkRmV8fhdqIEac5Z> <br><br> <https://000001.awsstudygroup.com>                                                                                                                                         |
+  | 4   | - Tìm hiểu AWS Budget & Cost Management <br> - **Thực hành:** <br>&emsp; + Create các loại Budget (Cost / Usage / RI / Savings Plan) <br>&emsp; + Clean up sau khi tạo Budget                  | 21/05/2026   | 21/05/2026      | <https://000007.awsstudygroup.com>                                                                                                                                                                                                                                                                 |
+  | 5   | - Tìm hiểu AWS Support <br> - Xem các gói support <br> - Theo dõi và quản lý support case                                                                                                      | 22/05/2026   | 22/05/2026      | <https://000009.awsstudygroup.com>                                                                                                                                                                                                                                                                 |
+  | 6   | - Hệ thống lại toàn bộ Module 01 <br> - Kiểm tra lại IAM user/group <br> - Kiểm tra MFA, budget và support đã hoạt động đúng <br> - Ghi chú lại các phần quan trọng để chuẩn bị sang Module 02 | 23/05/2026   | 23/05/2026      |                                                                                                                                                                                                                                                                                                    |
 
 
+  ### Kết quả đạt được tuần 1:
+
+  * Tổng quát: 
+    * Trong tuần đầu tiên, tôi đã làm quen với các kiến thức nền tảng về cloud và AWS, nắm được cách AWS tổ chức hạ tầng, vận hành dịch vụ và kiểm soát chi phí. Đồng thời tôi cũng thực hành các thao tác cơ bản như tạo tài khoản, cấu hình IAM và thiết lập hệ thống Budget để quản lý chi phí.
+    
+
+  * Lý thuyết đã học: 
+    * Khái niệm về điện toán đám mây và mô hình hoạt động của AWS
+    * Kiến trúc hạ tầng toàn cầu: Region, Availability Zone và Edge Location
+    * Các công cụ làm việc với AWS: AWS Management Console, AWS CLI và SDK
+    * Cơ chế quản lý truy cập trong IAM: User, Group, Policy
+    * Các dịch vụ và công cụ quản lý chi phí: Budget, Cost Explorer và AWS Support Plan
+
+    
+  * Thực hành với bài lab:
+    * Tạo tài khoản AWS và thiết lập xác thực đa yếu tố (MFA)   
+    * Tạo nhóm quản trị (admin group) và người dùng quản trị
+    * Thiết lập và cấu hình nhiều loại Budget để theo dõi chi phí
+    * Nghiên cứu các gói AWS Support và thử nghiệm tạo support case thực tế
