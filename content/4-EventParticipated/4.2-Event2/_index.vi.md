@@ -1,125 +1,165 @@
 ---
 title: "Event 2"
-date: 2024-01-01
-weight: 1
+date: "2026-07-31"
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Saturday Meet up
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+## Thông tin sự kiện
 
-### Mục Đích Của Sự Kiện
+| **Thông tin**             | **Chi tiết**                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------- |
+| **Tên sự kiện**           | Saturday Meet up                                                                       |
+| **Thời gian**             | 09:00 - 12:00, ngày 06/06/2026                                                         |
+| **Địa điểm**              | Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh |
+| **Vai trò trong sự kiện** | Người tham dự                                                                          |
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+---
 
-### Danh Sách Diễn Giả
+## Tóm tắt nội dung và bài học rút ra
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### 1. Docker – A Containerization Technology
 
-### Nội Dung Nổi Bật
+#### Thông tin diễn giả
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+> Diễn giả là **Bảo Huỳnh**, Junior Cloud Native Developer tại Endava Vietnam, Founder/Head Lab của ITea Lab và từng làm Cloud DevOps Engineer tại NAB Innovation Centre Vietnam.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Nội dung chính
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+Bài trình bày giới thiệu sự khác nhau giữa virtualization và containerization.
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+Virtual machine có khả năng cách ly tốt nhưng cần hệ điều hành riêng, tiêu tốn nhiều CPU, RAM và dung lượng lưu trữ. Trong khi đó, container nhẹ hơn vì dùng chung hệ điều hành của máy chủ.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+Docker giúp đóng gói ứng dụng cùng thư viện, dependency và cấu hình để ứng dụng có thể hoạt động nhất quán trên nhiều môi trường.
 
-#### Domain-Driven Design (DDD)
+Các thành phần chính của Docker gồm:
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- **Container:** Ứng dụng đang chạy.
+- **Image:** Mẫu chứa các thành phần cần thiết để chạy ứng dụng.
+- **Dockerfile:** File mô tả các bước tạo image.
+- **Layer và cache:** Giúp quá trình build nhanh và hiệu quả hơn.
 
-#### Event-Driven Architecture
-
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
-
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Docker được ứng dụng trong CI/CD, microservices, development, testing và cloud-native applications.
 
 #### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+Em hiểu rõ hơn sự khác nhau giữa virtual machine và container. Docker giúp giải quyết vấn đề ứng dụng chạy được trên máy này nhưng không chạy được trên máy khác.
+
+Để sử dụng Docker hiệu quả, cần nắm vững các khái niệm image, container, Dockerfile, layer và cache.
+
+---
+
+### 2. Combining AWS WAF with Machine Learning for Cyber Attack Detection on AWS
+
+#### Thông tin diễn giả
+
+> Diễn giả là **Lê Hoàng Gia Đại**, sinh viên năm cuối tại HUTECH University, định hướng trở thành AWS Cloud Engineer và Cyber Security Engineer.
+
+#### Nội dung chính
+
+Bài trình bày giới thiệu cách kết hợp **AWS WAF** với **Machine Learning-based NIDS** để phát hiện các cuộc tấn công mạng.
+
+AWS WAF giúp bảo vệ website, API và ứng dụng khỏi các cuộc tấn công như:
+
+- SQL Injection.
+- Cross-site Scripting.
+- Bot traffic.
+- Brute force.
+- Request bất thường.
+
+Tuy nhiên, WAF chủ yếu dựa trên rule và signature nên có thể gặp khó khăn với zero-day attack hoặc những hành vi chưa được định nghĩa trước.
+
+Machine Learning-based NIDS giúp phân tích traffic, phát hiện hành vi bất thường và nhận diện các mẫu tấn công mới.
+
+Mô hình sử dụng dataset **CSE-CIC-IDS2018**, được xử lý qua các bước làm sạch dữ liệu, loại bỏ giá trị lỗi, cân bằng class và chia tập train/test.
+
+Kiến trúc triển khai sử dụng nhiều dịch vụ AWS như WAF, Lambda, S3, CloudWatch, GuardDuty, Security Hub và Kinesis Data Firehose.
+
+#### Bài học rút ra
+
+AWS WAF là một lớp bảo vệ quan trọng nhưng không nên được sử dụng độc lập. Việc kết hợp WAF với Machine Learning giúp hệ thống phát hiện các hành vi bất thường linh hoạt hơn.
+
+Chất lượng dữ liệu ảnh hưởng trực tiếp đến hiệu quả của mô hình, vì vậy data preprocessing và class balancing là những bước rất quan trọng.
+
+---
+
+### 3. AWS Neptune for Building a Graph Knowledge Base for GraphRAG
+
+#### Thông tin diễn giả
+
+> Diễn giả là **Việt Phát**, sinh viên ngành Artificial Intelligence tại Swinburne University of Technology.
+
+#### Nội dung chính
+
+Bài trình bày giới thiệu **GraphRAG**, phương pháp kết hợp Retrieval-Augmented Generation với knowledge graph.
+
+RAG truyền thống truy xuất các đoạn văn bản liên quan để bổ sung ngữ cảnh cho Large Language Model. Tuy nhiên, phương pháp này có thể gặp khó khăn với những câu hỏi cần suy luận qua nhiều thực thể và mối quan hệ.
+
+GraphRAG biểu diễn:
+
+- Thực thể bằng **node**.
+- Mối quan hệ bằng **edge**.
+
+Nhờ đó, hệ thống có thể thực hiện multi-hop reasoning và trả lời tốt hơn những câu hỏi có cấu trúc quan hệ phức tạp.
+
+Hai hướng triển khai được giới thiệu gồm:
+
+- **Fully Managed Route:** Sử dụng Amazon Bedrock Knowledge Bases và Amazon Neptune Analytics.
+- **Custom Route:** Sử dụng LlamaIndex kết hợp Amazon Neptune.
+
+#### Bài học rút ra
+
+GraphRAG phù hợp với những hệ thống có dữ liệu chứa nhiều thực thể và mối quan hệ.
+
+Fully managed route giúp triển khai nhanh và giảm công việc vận hành, trong khi custom route linh hoạt hơn nhưng đòi hỏi nhiều kỹ năng và nguồn lực kỹ thuật hơn.
+
+---
+
+### 4. Multiplayer in the Cloud – Connecting Godot Clients with AWS WebSockets
+
+#### Thông tin diễn giả
+
+> Diễn giả là **Nguyễn Quốc Bảo**.
+
+#### Nội dung chính
+
+Bài trình bày giới thiệu cách kết nối Godot Client với AWS WebSockets để xây dựng game multiplayer trên cloud.
+
+Ba phương pháp multiplayer networking được đề cập gồm:
+
+- **UDP/ENet:** Phù hợp với FPS hoặc racing game cần độ trễ thấp.
+- **HTTP Polling:** Đơn giản nhưng có độ trễ cao.
+- **WebSocket:** Phù hợp với turn-based game, lobby, chat và matchmaking.
+
+Kiến trúc hệ thống gồm:
+
+- Godot Client.
+- API Gateway WebSocket.
+- AWS Lambda.
+- Amazon DynamoDB.
+- Amazon CloudWatch.
+
+Lambda xử lý kết nối, ngắt kết nối, ghép cặp người chơi, lưu lựa chọn và gửi kết quả về hai client.
+
+DynamoDB lưu các thông tin như `connectionId`, `status`, `opponentId`, `choice` và `createdAt`.
+
+#### Bài học rút ra
+
+Việc lựa chọn kiến trúc multiplayer cần phụ thuộc vào loại game.
+
+WebSocket kết hợp API Gateway và Lambda phù hợp với các game đơn giản, turn-based hoặc matchmaking. Tuy nhiên, serverless architecture không phù hợp với những game cần realtime physics, state liên tục và độ trễ cực thấp.
+
+Khi hệ thống mở rộng, cần tối ưu truy vấn DynamoDB, quản lý stale connection và cân nhắc AWS GameLift cho các game phức tạp hơn.
+
+---
+
+## Một số hình ảnh khi tham gia sự kiện
+
+Sử dụng code giảm giá: AWS_50_Standard trong web Tử Vi Đại Việt
+
+![Event photo](/images/4-EventParticipated/4.2-Event2/Bill.png)
+
+![Event photo](/images/4-EventParticipated/4.2-Event2/AWS_50_STANDARD.png)
