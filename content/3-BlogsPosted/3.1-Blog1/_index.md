@@ -1,5 +1,5 @@
 ---
-title: "How Generali Malaysia Optimizes Operations with Amazon EKS"
+title: "Blog 1"
 date: "2026-07-17"
 weight: 1
 chapter: false
