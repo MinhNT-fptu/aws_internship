@@ -160,4 +160,6 @@ Khi hệ thống mở rộng, cần tối ưu truy vấn DynamoDB, quản lý st
 
 Sử dụng code giảm giá: AWS_50_Standard trong web Tử Vi Đại Việt
 
+![Event photo](/images/4-EventParticipated/4.2-Event2/Bill.png)
+
 ![Event photo](/images/4-EventParticipated/4.2-Event2/AWS_50_STANDARD.png)
