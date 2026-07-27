@@ -5,10 +5,10 @@ weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
-During my internship, I participated in four events. Each event was a memorable experience that provided me with new, interesting, and valuable knowledge, along with meaningful gifts and wonderful moments.
+During my internship, I participated in three events. Each event was a memorable experience that provided me with new, interesting, and valuable knowledge, along with meaningful gifts and wonderful moments.
 
 ### [Event 1](4.1-Event1/)
-
+ 
  &emsp;**Event name:** Saturday Meet up
 
  &emsp;**Time:** 09:00 - 12:00, May 30, 2026
@@ -28,5 +28,18 @@ During my internship, I participated in four events. Each event was a memorable 
  &emsp;**Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
 
  &emsp;**Role at the event:** Attendee
+
+---
+
+### [Event 3](4.3-Event3/)
+
+ &emsp;**Event name:** FCAJ - AGENTIC AI BUILD WEEK
+
+ &emsp;**Time:** 09:00 - 12:00, July 25, 2026
+
+ &emsp;**Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City
+
+ &emsp;**Role at the event:** Attendee
+
 
 
