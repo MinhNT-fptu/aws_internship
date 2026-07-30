@@ -1,58 +1,47 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: "2026-06-27"
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+ 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu tổng quan các dịch vụ lưu trữ trên AWS (S3, Glacier, Backup, Storage Gateway, Snow Family).
+* Nắm rõ cách S3 hoạt động: access point, storage class, CORS, static website hosting.
+* Thực hành toàn bộ quy trình với S3, Backup, Storage Gateway, File System.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                                                                                                                                                                         |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2   | - Tìm hiểu tổng quan các dịch vụ lưu trữ AWS: S3, EBS, Backup, Storage Gateway, Snow Family <br> - Tìm hiểu Access Point, Storage Class và các mô hình truy cập dữ liệu <br> - Nắm rõ S3 static website, CORS, Object key, Glacier                                                                                                                                                                                                                                                                                                                       | 23/06/2026   | 23/06/2026      | <https://youtu.be/hsCfP0IxoaM?si=O3vMWs7Trr1fugJD> <br><br> <https://youtu.be/_yunukwcAwc?si=ZhkTKr-_OkyUNImI> <br><br> <https://youtu.be/mPBjB6Ltl_Q?si=qs6j0n7AeD2Mxwbz> <br><br> <https://youtu.be/YXn8Q_Hpsu4?si=XojTnkR_LLC1KwEv> |
+| 3   | **Thực hành:** <br>&emsp; + Create S3 bucket <br>&emsp; + Deploy hạ tầng backup <br>&emsp; + Create backup plan và set up notification <br>&emsp; + Test restore và Dọn dẹp tài nguyên backup                                                                                                                                                                                                                                                                                                                                                            | 24/06/2026   | 24/06/2026      | <https://000013.awsstudygroup.com>                                                                                                                                                                                                     |
+| 4   | - Tìm hiểu VMware Workstation <br> - **Thực hành:** <br>&emsp; + Export VM từ on-prem <br>&emsp; + Upload VM lên AWS <br>&emsp; + Import thành EC2 <br>&emsp; + Export lại thành AMI <br>&emsp; + Dọn dẹp môi trường import/export                                                                                                                                                                                                                                                                                                                       | 25/06/2026   | 25/06/2026      | <https://000014.awsstudygroup.com>                                                                                                                                                                                                     |
+| 5   | - **Thực hành:** <br>&emsp; + Create Storage Gateway <br>&emsp; + Create File Share nâng cao <br>&emsp; + kết nối File Share trên máy on-prem <br>&emsp; + Dọn dẹp Storage Gateway + File Shares                                                                                                                                                                                                                                                                                                                                                         | 26/06/2026   | 26/06/2026      | <https://000024.awsstudygroup.com>                                                                                                                                                                                                     |
+| 6   | - **Thực hành(lab25):** <br>&emsp; + Create FSx file system (SSD/HDD, Multi-AZ) <br>&emsp; + Create và cấu hình file shares <br>&emsp; + Test và giám sát hiệu năng <br>&emsp; + Quản lý user sessions + quotas <br> - **Thực hành(lab57):** <br>&emsp; + Create bucket, upload dữ liệu, bật static website <br>&emsp; + Cấu hình public access + set quyền đối tượng <br>&emsp; + Create và cấu hình CloudFront phân phối nội dung<br>&emsp; + Enable versioning và replication object <br> - Dọn dẹp môi trường(lab25) bucket, CloudFront, replication | 27/06/2026   | 27/06/2026      | <https://000025.awsstudygroup.com> <br><br> <https://000057.awsstudygroup.com>                                                                                                                                                         |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tổng quát: 
+  * Trong tuần này, tôi đã nắm được tổng quan về hệ sinh thái lưu trữ của AWS, bao gồm S3, Glacier, AWS Backup, Storage Gateway và các loại file system. Tôi tập trung vào việc thực hành để hiểu rõ cách quản lý dữ liệu, cơ chế backup–restore và các mô hình lưu trữ phổ biến trên AWS.  
+  
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Lý thuyết đã học:
+  * Khái niệm về S3 Storage Classes, Access Point, và CORS configuration.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+  * Tìm hiểu về Glacier, lifecycle policy và các khái niệm liên quan đến AWS Backup.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+ * Kiến trúc và cơ chế hoạt động của AWS Storage Gateway và các loại file system trên AWS.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+ * Cơ chế import/export máy ảo lên AWS.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+  
+* Thực hành với bài lab:
+  * Backup & restore
+  * Import máy ảo on-prem lên AWS
+  * Tạo file system Multi-AZ
+  * Xây dựng static website bằng S3, tích hợp CloudFront, bật versioning và replication.
+  * Thực hành với Storage Gateway: tạo file share, kết nối thử và kiểm tra truyền dữ liệu giữa on-prem và AWS.
