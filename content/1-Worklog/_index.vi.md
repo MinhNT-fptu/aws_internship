@@ -24,10 +24,10 @@ pre: " <b> 1. </b> "
 
 **Tuần 8:** [Database Services, ETL (Kinesis/Glue/Athena), DMS Migration.](1.8-week8/)
 
-**Tuần 9:** [Thiết kế kiến trúc Serverless tổng thể: API Gateway, Lambda, DynamoDB, CloudFront, WAF, Cognito, CI/CD Pipeline..](1.9-week9/)
+**Tuần 9:** [Tìm hiểu và thiết kế kiến trúc triển khai dự án trên AWS với Route 53, CloudFront, S3, EC2, MongoDB Atlas, CloudWatch và các dịch vụ hỗ trợ.](1.9-week9/)
 
-**Tuần 10:** [Xây dựng Backend, DynamoDB Local và tích hợp Frontend ban đầu.](1.10-week10/)
+**Tuần 10:** [Phát triển Backend: điều chỉnh luồng xác nhận thanh toán, refactor Notification và giới hạn thành viên cho nhóm Free Plan.](1.10-week10/)
 
-**Tuần 11:** [Hoàn thiện UI, tích hợp API và chuẩn bị cho quá trình deploy.](1.11-week11/)
+**Tuần 11:** [Hoàn thiện hệ thống Notification, xây dựng luồng thanh toán của người nợ và triển khai chức năng gửi, xử lý khiếu nại.](1.11-week11/)
 
 **Tuần 12:** [Học AWS Console, AWS CLI, IAM, EC2 và các khái niệm cloud cần thiết để chuẩn bị deploy hệ thống.](1.12-week12/)
