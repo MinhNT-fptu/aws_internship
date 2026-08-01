@@ -30,4 +30,4 @@ pre: " <b> 1. </b> "
 
 **Tuần 11:** [Hoàn thiện hệ thống Notification, xây dựng luồng thanh toán của người nợ và triển khai chức năng gửi, xử lý khiếu nại.](1.11-week11/)
 
-**Tuần 12:** [Học AWS Console, AWS CLI, IAM, EC2 và các khái niệm cloud cần thiết để chuẩn bị deploy hệ thống.](1.12-week12/)
+**Tuần 12:** [Nghiên cứu, thiết kế kiến trúc môi trường dev/test và triển khai dự án lên AWS với S3, VPC, EC2, MongoDB Atlas, CloudWatch cùng các dịch vụ hỗ trợ.](1.12-week12/)

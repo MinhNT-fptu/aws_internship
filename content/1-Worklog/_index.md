@@ -28,4 +28,4 @@ pre: " <b> 1. </b> "
 
 **Week 11:** [Complete the Notification system, implement the debtor payment flow, and develop the complaint submission and handling features.](1.11-week11/)
 
-**Week 12:** [Learning AWS Console, AWS CLI, IAM, EC2, and cloud fundamentals before deploying the system.](1.12-week12/)
+**Week 12:** [Research, design the dev/test architecture, and deploy the project to AWS using S3, VPC, EC2, MongoDB Atlas, CloudWatch, and supporting services.](1.12-week12/)
