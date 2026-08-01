@@ -1,6 +1,7 @@
 baseURL = "https://MinhNT-fptu.github.io/aws_internship/"
 relativeURLs = false
 canonifyURLs = false
+buildFuture = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
