@@ -283,5 +283,5 @@ Sự kiện cũng giúp em nhận ra rằng một sản phẩm AI thành công k
 
 ## Một số hình ảnh khi tham gia sự kiện
 
-![Event photo](/images/4-EventParticipated/4.3-Event3/event3.png)
+![Event photo](/aws_internship/images/4-EventParticipated/4.3-Event3/event3.png)
 

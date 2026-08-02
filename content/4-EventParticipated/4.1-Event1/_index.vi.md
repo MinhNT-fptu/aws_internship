@@ -277,4 +277,4 @@ Tuy nhiên, người học cũng cần hiểu rõ giới hạn của từng côn
 
 ## Hình ảnh sự kiện
 
-![Event photo](/images/4-EventParticipated/4.1-Event1/event1.png)
+![Event photo](/aws_internship/images/4-EventParticipated/4.1-Event1/event1.png)

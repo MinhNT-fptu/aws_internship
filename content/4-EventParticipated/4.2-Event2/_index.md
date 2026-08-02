@@ -160,6 +160,6 @@ As the system scales, DynamoDB queries and stale connections must be managed eff
 
 Use discount code: AWS_50_Standard on the Tu Vi Dai Viet website
 
-![Event photo](/images/4-EventParticipated/4.2-Event2/Bill.png)
+![Event photo](/aws_internship/images/4-EventParticipated/4.2-Event2/Bill.png)
 
-![Event photo](/images/4-EventParticipated/4.2-Event2/AWS_50_STANDARD.png)
+![Event photo](/aws_internship/images/4-EventParticipated/4.2-Event2/AWS_50_STANDARD.png)

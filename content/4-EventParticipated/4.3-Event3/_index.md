@@ -284,4 +284,4 @@ The event also helped me understand that the success of an AI product does not d
 
 ## Photos from the Event
 
-![Event photo](/images/4-EventParticipated/4.3-Event3/event3.png)
+![Event photo](/aws_internship/images/4-EventParticipated/4.3-Event3/event3.png)
