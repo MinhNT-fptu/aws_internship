@@ -86,6 +86,7 @@ The project uses a monolithic application architecture deployed centrally on AWS
 * **Monitoring:** Amazon CloudWatch is used to collect basic metrics and system logs and to monitor the operating status of the EC2 instance and application. When an error occurs or a monitored metric exceeds its threshold, CloudWatch triggers an alert through Amazon SNS.
 * **Cost Management:** AWS Budgets continuously monitors resource costs and automatically sends alerts through email or SNS when spending exceeds the expected project budget.
 
+### 2.3.1 Current Architecture
 ![Architecture](/aws_internship/images/2-Proposal/Architecture_Final.png)
 
 ### AWS Services Used
@@ -120,6 +121,40 @@ The project uses a monolithic application architecture deployed centrally on AWS
 * **Alert Delivery:** Amazon SNS acts as an alert delivery channel, sending emails or notifications from CloudWatch and AWS Budgets to the system administrator.
 
 * **Cost Management:** AWS Budgets continuously monitors AWS infrastructure costs and triggers alerts when actual or forecasted spending reaches or exceeds the configured budget threshold.
+
+### 2.3.2 Proposed Future Architecture
+
+The following architecture represents the proposed future enhancement of the Splitly system. It is not part of the current deployment but is planned as the next stage of infrastructure development.
+
+![Architecture_Update](/aws_internship/images/2-Proposal/Architecture_Update.png)
+
+In the proposed architecture, the frontend application will be separated from the backend server. The React/Vite frontend will be built into static files and stored in an Amazon S3 Frontend Bucket. Amazon CloudFront will distribute the frontend content to users with lower latency and improved availability.
+
+Amazon Route 53 will provide Domain Name System (DNS) management, while AWS WAF will help protect the web application from common web attacks. AWS Certificate Manager will be used to manage SSL/TLS certificates and enable secure HTTPS communication.
+
+The backend application will continue to run on an Amazon EC2 instance located in a Public Subnet within the Amazon VPC. The backend will process business logic, provide REST APIs, connect to MongoDB Atlas, and upload receipt files to a separate Amazon S3 Receipts Bucket.
+
+Amazon CloudWatch will monitor infrastructure metrics and application logs. Amazon SNS will send operational alerts to the administrator, while AWS Budgets will monitor infrastructure costs and notify the project team when spending approaches the configured budget limit.
+
+### 2.3.3 Expected Improvements
+
+Compared with the current architecture, the proposed future architecture provides the following improvements:
+
++ **Frontend and backend separation:** Static frontend files are moved from EC2 to Amazon S3, allowing the EC2 instance to focus on backend processing.
+
++ **Improved performance:** Amazon CloudFront caches and distributes frontend content through edge locations, reducing website loading time.
+
++ **Enhanced security:** AWS WAF protects the application from common web attacks, while AWS Certificate Manager supports secure HTTPS connections.
+
++ **Domain management:** Amazon Route 53 allows users to access the application through a custom domain instead of directly using the Elastic IP address.
+
++ **Improved scalability:** The frontend and backend can be scaled independently based on system demand.
+
++ **Reduced EC2 workload:** Serving frontend files through Amazon S3 and CloudFront reduces the amount of traffic and processing handled by the EC2 instance.
+
++ **Better availability:** CloudFront and Amazon S3 provide a more reliable method for distributing static frontend content.
+
+This architecture provides a foundation for future expansion, including the possible introduction of an Application Load Balancer, Auto Scaling, Amazon Cognito, AWS Lambda, and automated CI/CD deployment.
 
 ---
 

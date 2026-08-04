@@ -83,6 +83,7 @@ Dự án sử dụng kiến trúc nguyên khối (Monolithic) cho phần ứng d
 * **Giám sát (Monitoring):** Amazon CloudWatch được sử dụng để thu thập các metric cơ bản và log hệ thống, theo dõi trạng thái hoạt động của EC2 và ứng dụng. Khi có sự cố lỗi hoặc thông số vượt ngưỡng, CloudWatch sẽ kích hoạt cảnh báo qua Amazon SNS.
 * **Quản lý chi phí:** AWS Budgets liên tục theo dõi chi phí tài nguyên và sẽ tự động gửi cảnh báo (qua email hoặc SNS) nếu chi tiêu vượt mức ngân sách dự kiến của dự án.
 
+### 2.3.1 Kiến trúc hiện tại
 ![Architecture](/aws_internship/images/2-Proposal/Architecture_Final.png)
 
 ### Dịch vụ AWS sử dụng
@@ -117,6 +118,48 @@ Dự án sử dụng kiến trúc nguyên khối (Monolithic) cho phần ứng d
 * **Gửi cảnh báo:** Amazon SNS làm nhiệm vụ trung chuyển, gửi email hoặc tin nhắn thông báo từ CloudWatch và AWS Budgets đến quản trị viên.
 
 * **Quản lý chi phí:** AWS Budgets liên tục theo dõi chi phí sử dụng hạ tầng AWS và kích hoạt cảnh báo khi mức tiêu dùng đạt hoặc vượt ngưỡng ngân sách dự kiến.
+
+### 2.3.2 Kiến trúc đề xuất trong tương lai
+
+Hình dưới đây mô tả kiến trúc nâng cấp được đề xuất cho hệ thống Splitly trong tương lai. Kiến trúc này chưa nằm trong phạm vi triển khai hiện tại nhưng được định hướng là giai đoạn phát triển tiếp theo của hệ thống.
+
+![Architecture_Update](/aws_internship/images/2-Proposal/Architecture_Update.png)
+
+Trong kiến trúc đề xuất, ứng dụng frontend sẽ được tách khỏi máy chủ backend. Frontend React/Vite được build thành các file tĩnh và lưu trữ trong Amazon S3 Frontend Bucket. Amazon CloudFront được sử dụng để phân phối nội dung frontend đến người dùng, giúp giảm độ trễ và cải thiện tốc độ tải trang.
+
+Amazon Route 53 được sử dụng để quản lý tên miền và định tuyến người dùng đến hệ thống. AWS WAF được đặt trước CloudFront nhằm hỗ trợ bảo vệ ứng dụng khỏi một số hình thức tấn công web phổ biến. AWS Certificate Manager được sử dụng để quản lý chứng chỉ SSL/TLS, cho phép hệ thống cung cấp kết nối HTTPS an toàn.
+
+Ứng dụng backend tiếp tục được triển khai trên một Amazon EC2 instance nằm trong Public Subnet thuộc Amazon VPC. Backend chịu trách nhiệm xử lý nghiệp vụ, cung cấp REST API, kết nối với MongoDB Atlas và tải các file biên lai lên Amazon S3 Receipts Bucket.
+
+Amazon S3 Receipts Bucket được sử dụng riêng để lưu trữ hình ảnh và file biên lai do người dùng tải lên. Việc tách riêng Frontend Bucket và Receipts Bucket giúp hệ thống quản lý dữ liệu rõ ràng hơn và áp dụng các chính sách truy cập phù hợp cho từng loại tài nguyên.
+
+Amazon CloudWatch được sử dụng để thu thập metric hạ tầng và log ứng dụng. Amazon SNS chịu trách nhiệm gửi cảnh báo vận hành đến quản trị viên, trong khi AWS Budgets theo dõi chi phí sử dụng tài nguyên và gửi thông báo khi mức chi tiêu tiệm cận hoặc vượt ngưỡng ngân sách đã thiết lập.
+
+AWS IAM được sử dụng để quản lý quyền truy cập giữa EC2 và các dịch vụ AWS. EC2 được gắn IAM Role nhằm cho phép backend truy cập S3 và CloudWatch mà không cần lưu trữ Access Key và Secret Access Key trực tiếp trên máy chủ.
+
+### 2.3.3 Những cải tiến dự kiến
+
+So với kiến trúc hiện tại, kiến trúc đề xuất trong tương lai mang lại các cải tiến sau:
+
++ **Tách biệt frontend và backend:** Các file frontend tĩnh được chuyển từ EC2 sang Amazon S3, giúp EC2 tập trung xử lý API và nghiệp vụ backend.
+
++ **Cải thiện hiệu suất:** Amazon CloudFront lưu vào bộ nhớ đệm và phân phối nội dung frontend thông qua hệ thống edge location, giúp giảm thời gian tải trang cho người dùng.
+
++ **Hỗ trợ tên miền riêng:** Amazon Route 53 cho phép người dùng truy cập Splitly thông qua tên miền thay vì sử dụng trực tiếp địa chỉ Elastic IP.
+
++ **Hỗ trợ HTTPS:** AWS Certificate Manager quản lý chứng chỉ SSL/TLS, giúp mã hóa dữ liệu truyền giữa người dùng và hệ thống.
+
++ **Tăng cường bảo mật ứng dụng web:** AWS WAF hỗ trợ lọc và kiểm soát các request trước khi chúng được chuyển đến CloudFront và các thành phần phía sau.
+
++ **Giảm tải cho EC2:** Việc phục vụ frontend thông qua Amazon S3 và CloudFront giúp giảm lượng request và lưu lượng mà máy chủ EC2 phải xử lý.
+
++ **Quản lý lưu trữ rõ ràng hơn:** Frontend Bucket được sử dụng cho các file giao diện tĩnh, trong khi Receipts Bucket được sử dụng riêng cho các file do người dùng tải lên.
+
++ **Cải thiện khả năng mở rộng:** Frontend và backend có thể được nâng cấp hoặc mở rộng độc lập theo nhu cầu sử dụng của hệ thống.
+
++ **Cải thiện khả năng giám sát:** Amazon CloudWatch, Amazon SNS và AWS Budgets giúp nhóm theo dõi trạng thái hoạt động, nhận cảnh báo sự cố và kiểm soát chi phí tốt hơn.
+
+Kiến trúc này tạo nền tảng cho các giai đoạn mở rộng tiếp theo của Splitly, chẳng hạn như bổ sung Application Load Balancer, Auto Scaling, Amazon Cognito, AWS Lambda hoặc quy trình triển khai tự động CI/CD.
 
 ---
 
