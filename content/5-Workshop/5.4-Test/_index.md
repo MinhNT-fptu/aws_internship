@@ -1,20 +1,31 @@
 ---
-title : "Access S3 from on-premises"
-date : 2024-01-01
+title : "Test"
+date : 2026-08-02
 weight : 4
 chapter : false
 pre : " <b> 5.4. </b> "
 ---
 
-#### Overview
+* Check the **PM2 status** of the backend:
 
-+ In this section, you will create an Interface endpoint to access Amazon S3 from a simulated on-premises environment. The Interface endpoint will allow you to route to Amazon S3 over a VPN connection from your simulated on-premises environment.
+![test](/aws_internship/images/5-Workshop/5.4-Test/17h1.png)
 
-+ Why using **Interface endpoint**: 
-    + Gateway endpoints only work with resources running in the VPC where they are created. Interface endpoints work with resources running in VPC, and also resources running in on-premises environments. Connectivty from your on-premises environment to the cloud can be provided by AWS Site-to-Site VPN or AWS Direct Connect.
-    + Interface endpoints allow you to connect to services powered by AWS PrivateLink. These services include some AWS services, services hosted by other AWS customers and partners in their own VPCs (referred to as PrivateLink Endpoint Services), and supported AWS Marketplace Partner services. For this workshop, we will focus on connecting to Amazon S3.
+* Check the frontend result:
 
-![Interface endpoint architecture](/images/5-Workshop/5.4-S3-onprem/diagram3.png)
+![test](/aws_internship/images/5-Workshop/5.4-Test/17h2.png)
+
+* Next, verify that the frontend has been built successfully:
+
+![test](/aws_internship/images/5-Workshop/5.4-Test/17h3.png)
+
+* Then, check the frontend build directory:
+
+![test](/aws_internship/images/5-Workshop/5.4-Test/17h4.png)
+
+* Perform a final check of the entire deployment:
+
+![test](/aws_internship/images/5-Workshop/5.4-Test/17h5.png)
+
 
 
 
