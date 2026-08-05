@@ -8,13 +8,13 @@ pre: " <b> 7. </b> "
 ### Overall Evaluation
 
 **1. Working Environment**  
-The working environment at AWS through the FCJ program is highly professional and well-organized. The learning and working space is structured effectively, enabling me to focus and absorb knowledge efficiently. FCJ regularly organizes workshops, which help me expand my understanding and stay updated with the latest technologies available on AWS.
+The working environment at AWS through the FCAJ program is highly professional and well-organized. The learning and working space is structured effectively, enabling me to focus and absorb knowledge efficiently. FCAJ regularly organizes workshops, which help me expand my understanding and stay updated with the latest technologies available on AWS.
 
 **2. Support from Mentor / Team Admin**  
 My mentor provided detailed guidance, explained clearly whenever I did not fully understand, and consistently encouraged me to ask questions. I truly appreciate that the mentor let me try and solve problems on my own instead of giving me the answer immediately, which helped me become more proactive and improve quickly. The admin team was also very supportive, preparing all necessary documents and procedures to ensure a smooth working process. Whenever I had questions, both the mentor and admin team responded quickly and provided thorough explanations, motivating me throughout the internship.
 
 **3. Relevance of Work to My Academic Major**  
-During the internship, I learned many important skills—from technical knowledge such as working with AWS services to soft skills like teamwork, presentation, and report writing. The sharing sessions from experts and FCJ members gave me new perspectives and valuable insights for shaping my future career development.
+During the internship, I learned many important skills—from technical knowledge such as working with AWS services to soft skills like teamwork, presentation, and report writing. The sharing sessions from experts and FCAJ members gave me new perspectives and valuable insights for shaping my future career development.
 
 **4. Learning & Skill Development Opportunities**  
 Throughout the internship, I gained a wide range of new skills, including the use of project management tools, effective teamwork, and professional communication in a corporate setting. My mentor also shared a lot of practical experience that helped me build clearer career directions, especially in the DevOps and cloud domain.
