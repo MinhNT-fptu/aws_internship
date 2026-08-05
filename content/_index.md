@@ -24,12 +24,12 @@ chapter: false
 
 &emsp; **Internship Duration:** From 18/05/2026 to 09/08/2026
 
-
+![avatar](/aws_internship/images/avatar.png)
 
 ### Report Content
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
-3.  [Translated Blogs](3-blogsposted/)
+3.  [Blogs Posted](3-blogsposted/)
 4.  [Events Participated](4-EventParticipated/)
 5.  [Workshop](5-Workshop/)
 6.  [Self-evaluation](6-Self-evaluation/)
